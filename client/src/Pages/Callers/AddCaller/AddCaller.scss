@@ -1,0 +1,184 @@
+.AddCaller {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    width: 96%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: height 0.3s;
+    .CloseAdd {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 25px;
+        aspect-ratio: 1;
+        cursor: pointer;
+        z-index: 2;
+        transform: translateY(120px);
+        transition: transform 0.3s;
+        span {
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 2px;
+            &:nth-child(1) {
+                rotate: 45deg;
+            }
+            &:nth-child(2) {
+                rotate: -45deg;
+            }
+        }
+    }
+    .AddStarter {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--green);
+        background-color: var(--green_);
+        height: 60px;
+        min-height: 60px;
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.2s, top 0.3s;
+        &:hover {
+            background-color: var(--green__);
+        }
+    }
+    .AddCallerForm {
+        position: relative;
+        width: 100%;
+        transition: transform 0.3s;
+        transform: translateY(120px);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        padding: 15px 0;
+
+        form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            text-align: start;
+            .InpRow {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                justify-content: center;
+                padding: 0 20px;
+                flex-wrap: wrap;
+            }
+            .InpLabel {
+                display: flex;
+                flex-direction: column;
+                p {
+                    color: var(--b-title);
+                    font-size: 16px;
+                }
+                input {
+                    background-color: var(--input-bg);
+                    border: 0;
+                    border-radius: 5px;
+                    height: 35px;
+                    outline: none;
+                    width: 150px;
+                    padding: 0 10px;
+
+                    font-family: main_b;
+                    letter-spacing: 2px;
+                    font-size: 15px;
+                }
+                .Male {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 14px;
+                    cursor: pointer;
+                    height: 35px;
+                    width: 120px;
+                    border-radius: 5px;
+                    background-color: var(--blue_);
+                    color: var(--blue);
+                    border: 2px solid transparent;
+                    transition: border-color 0.2s;
+                }
+                .Female {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 14px;
+                    cursor: pointer;
+                    height: 35px;
+                    width: 120px;
+                    border-radius: 5px;
+                    background-color: var(--pink_);
+                    color: var(--pink);
+                    border: 2px solid transparent;
+                    transition: border-color 0.2s;
+                }
+                .MaleC {
+                    border: 2px solid var(--blue);
+                }
+                .FemaleC {
+                    border: 2px solid var(--pink);
+                }
+                .BRow {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+}
+.AddCall {
+    color: var(--green);
+    background-color: var(--green_);
+    cursor: pointer;
+    transition: background-color 0.2s, top 0.3s;
+    font-family: main_b;
+    letter-spacing: 1px;
+    font-size: 16px;
+    height: 35px;
+    width: 150px;
+    margin: auto;
+    border-radius: 5px;
+    border: 0;
+    margin-top: 10px;
+    &:hover {
+        background-color: var(--green__);
+    }
+}
+.AddC {
+    height: 220px;
+    .AddStarter {
+        top: -60px;
+    }
+    .AddCallerForm {
+        transform: translateY(0px);
+    }
+    .CloseAdd {
+        transform: translateY(0);
+    }
+}
+@media (max-width: 820px) {
+    .AddC {
+        height: auto;
+    }
+}

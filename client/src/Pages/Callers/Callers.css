@@ -1,0 +1,249 @@
+.Callers {
+  min-height: 650px;
+  max-width: 800px;
+  width: 98%;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+}
+.Callers h1 {
+  color: var(--main-color);
+  letter-spacing: 5px;
+}
+.Callers .CallersRow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 94%;
+  margin: auto;
+  margin-top: 20px;
+  overflow-y: auto;
+  max-height: 700px;
+  padding-right: 10px;
+}
+.Callers .CallersRow::-webkit-scrollbar {
+  width: 8px;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+.Callers .CallersRow::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+.Callers .CallersRow .Caller {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  max-width: 100%;
+  height: 60px;
+  min-height: 60px;
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+}
+.Callers .CallersRow .Caller button {
+  height: 40px;
+  background-color: var(--main-color_);
+  color: var(--main-color);
+  font-family: main_b;
+  letter-spacing: 1px;
+  font-size: 14px;
+  width: 150px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.Callers .CallersRow .Caller button:hover {
+  background-color: var(--main-color_h);
+}
+.Callers .CallersRow .Caller .deleteCaller {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  color: var(--red-color);
+  background-color: var(--red-color_);
+  transition: 0.5s;
+}
+.Callers .CallersRow .Caller .deleteCaller:hover {
+  background-color: var(--red-color_h);
+}
+.Callers .CallersRow .Caller .updateCaller {
+  position: absolute;
+  bottom: 0px;
+  right: 160px;
+  color: var(--yellow-color);
+  background-color: var(--yellow-color_);
+  transition: 0.5s;
+}
+.Callers .CallersRow .Caller .updateCaller:hover {
+  background-color: var(--yellow-color_h);
+}
+.Callers .CallersRow .Caller .Line {
+  width: 96%;
+  margin: 10px auto;
+  min-height: 1px;
+  margin-bottom: 15px;
+}
+.Callers .CallersRow .Caller .CallerStarter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+}
+.Callers .CallersRow .Caller .Id {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  aspect-ratio: 1;
+  font-size: 20px;
+  border-radius: 5px;
+  color: var(--main-color);
+  background-color: var(--main-color_);
+}
+.Callers .CallersRow .Caller .CallerName {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.Callers .CallersRow .Caller .CallerName .Title {
+  color: var(--b-title);
+}
+.Callers .CallersRow .Caller .CallerName p {
+  color: var(--b-desc);
+  font-size: 14px;
+  line-height: 18px;
+}
+.Callers .CallersRow .Caller .HLine {
+  height: 30px;
+  width: 1px;
+  background-color: #d9d9d9;
+  margin: 0 15px;
+  margin-left: 20px;
+}
+.Callers .CallersRow .Caller .CallerNumber {
+  font-size: 15px;
+  color: var(--main-color);
+}
+.Callers .CallersRow .Caller .CallerButtons {
+  margin-left: auto;
+}
+.Callers .CallersRow .CallerActive {
+  height: 200px;
+  min-height: 200px;
+}
+.Callers .CallerDetails {
+  display: flex;
+  padding: 0 20px;
+  position: relative;
+  padding-bottom: 20px;
+}
+.Callers .CallerDetails .HLineDesc {
+  height: 80%;
+  width: 1px;
+  background-color: #d9d9d9;
+  margin: 0 30px;
+}
+.Callers .DetRow {
+  width: auto;
+  text-align: start;
+  color: var(--b-title);
+}
+.Callers .DetRow h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.Callers .DetRow p {
+  font-size: 16px;
+  margin-left: 15px;
+}
+.Callers .DetRow p span {
+  color: var(--b-desc);
+}
+
+.goCharts {
+  position: absolute;
+  right: 20px;
+}
+.goCharts button {
+  letter-spacing: 2px;
+}
+
+@media (max-width: 820px) {
+  .UpdateBlock {
+    top: 30px;
+  }
+  .Callers .CallersRow {
+    max-height: unset;
+  }
+  .Callers .CallersRow .Caller {
+    min-height: unset;
+    min-height: 260px;
+    padding: 10px;
+  }
+  .Callers .CallersRow .Caller .CallerButtons {
+    display: none;
+  }
+  .Callers .CallersRow .Caller .CallerStarter {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    min-height: unset;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .Callers .CallersRow .Caller .CallerStarter .Id {
+    height: 45px;
+  }
+  .Callers .CallersRow .Caller .CallerName {
+    margin: 0;
+  }
+  .Callers .CallersRow .Caller .CallerName p {
+    text-align: center;
+    margin: auto;
+  }
+  .Callers .CallersRow .Caller .HLine {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  #root {
+    width: 100%;
+  }
+  .Callers {
+    padding-top: 50px;
+  }
+  .goCharts {
+    top: 10px;
+    right: 10px;
+  }
+  .Callers .CallerDetails {
+    padding-bottom: 60px;
+  }
+  .Callers .CallersRow .Caller {
+    min-height: auto;
+    height: auto;
+  }
+}
+@media (max-width: 360px) {
+  .Callers .CallerDetails {
+    padding-bottom: 120px;
+  }
+  .Callers .CallersRow .Caller .deleteCaller {
+    bottom: 0px;
+    right: 10px;
+  }
+  .Callers .CallersRow .Caller .updateCaller {
+    bottom: 50px;
+    right: 10px;
+  }
+}

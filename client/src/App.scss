@@ -1,0 +1,97 @@
+:root {
+    --main-color: #19a7ce;
+    --main-color_: rgba(25, 165, 204, 0.1);
+    --main-color_h: rgba(25, 167, 206, 0.15);
+    --b-title: rgba(0, 0, 0, 0.9);
+    --b-desc: rgba(0, 0, 0, 0.7);
+    --green: rgb(0, 255, 153);
+    --green_: rgba(0, 255, 153, 0.1);
+    --green__: rgba(0, 255, 153, 0.15);
+    --red-color: #ff2424;
+    --red-color_: rgba(255, 36, 36, 0.1);
+    --red-color_h: rgba(255, 36, 36, 0.15);
+    --input-bg: #f3f3f3;
+    --blue: #00b2ff;
+    --blue_: rgba(0, 179, 255, 0.1);
+    --pink: #ed1fff;
+    --pink_: rgba(236, 31, 255, 0.1);
+    --yellow-color: rgb(255, 179, 0);
+    --yellow-color_: rgba(255, 179, 0, 0.1);
+    --yellow-color_h: rgba(255, 179, 0, 0.2);
+}
+@font-face {
+    font-family: main_b;
+    src: url("./Fonts/Poppins-Bold.ttf");
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #fcfcfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: main_b;
+    letter-spacing: 1px;
+}
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.Loader {
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(6, 7, 40, 0.5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s, visibility 0.3s;
+    z-index: 9;
+    .LoaderBlock {
+        visibility: hidden;
+        opacity: 0;
+        height: 70px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: transparent;
+        border: 12px solid transparent;
+        border-top: 12px solid var(--green);
+        border-bottom: 12px solid var(--green);
+        animation: loader 1.2s infinite linear;
+        transition: opacity 0.2s, visibility 0.3s;
+    }
+}
+.LoaderShow {
+    visibility: visible;
+    opacity: 1;
+    .LoaderBlock {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.Line {
+    height: 1px;
+    width: 96%;
+    border-radius: 5px;
+    margin: 15px auto;
+    background-color: #d9d9d9;
+}
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
